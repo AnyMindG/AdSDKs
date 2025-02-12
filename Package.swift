@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.1.0
+// v1.2.0
 let package = Package(
     name: "AdSDKs",
     platforms: [.iOS(.v12)],
@@ -24,6 +24,38 @@ let package = Package(
         .library(
             name: "OgurySdk",
             targets: ["OgurySdk"]
+        ),
+        .library(
+            name: "MTGSDK",
+            targets: ["MTGSDK"]
+        ),
+        .library(
+            name: "MTGSDKBanner",
+            targets: ["MTGSDKBanner"]
+        ),
+        .library(
+            name: "MTGSDKBidding",
+            targets: ["MTGSDKBidding"]
+        ),
+        .library(
+            name: "MTGSDKInterstitialVideo",
+            targets: ["MTGSDKInterstitialVideo"]
+        ),
+        .library(
+            name: "MTGSDKNativeAdvanced",
+            targets: ["MTGSDKNativeAdvanced"]
+        ),
+        .library(
+            name: "MTGSDKNewInterstitial",
+            targets: ["MTGSDKNewInterstitial"]
+        ),
+        .library(
+            name: "MTGSDKReward",
+            targets: ["MTGSDKReward"]
+        ),
+        .library(
+            name: "MTGSDKSplash",
+            targets: ["MTGSDKSplash"]
         ),
     ],
     dependencies: [],
