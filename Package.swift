@@ -3,6 +3,7 @@
 
 import PackageDescription
 
+// v1.1.0
 let package = Package(
     name: "AdSDKs",
     platforms: [.iOS(.v12)],
@@ -46,6 +47,46 @@ let package = Package(
             name: "OMSDK_Ogury",
             url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.10.0/OMSDK_Ogury.zip",
             checksum: "06b0f9bd048a3cb80f60a704abc04a0a62cff276a31b7eb9f224d8e849665d5f"
-        )
+        ),
+        .binaryTarget(
+            name: "MTGSDK",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.13.0/MTGSDK.zip",
+            checksum: "544310984b9730df7d5eaa22d0793770841026b5635f9f530d8de5246d1faf4c"
+        ),
+        .binaryTarget(
+            name: "MTGSDKBanner",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.14.0/MTGSDKBanner.zip",
+            checksum: "3c0dbdb0a95f819548ab11c94fe96cecd16611a1b939bdf366f9295cd3aa7735"
+        ),
+        .binaryTarget(
+            name: "MTGSDKBidding",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.15.0/MTGSDKBidding.zip",
+            checksum: "4daad9023a5024a0191dcb278a26197c86724e551517674a67b7c7337af02c5f"
+        ),
+        .binaryTarget(
+            name: "MTGSDKInterstitialVideo",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.16.0/MTGSDKInterstitialVideo.zip",
+            checksum: "eb5cb2bdb9ccb82e727d2cb249bec69f632b6d47ee4fbcae5aa8094f4b769220"
+        ),
+        .binaryTarget(
+            name: "MTGSDKNativeAdvanced",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.17.0/MTGSDKNativeAdvanced.zip",
+            checksum: "6272d7438c24a86970837c23569b6e1c0db3a3c997c456cdfd1f4ce20ee760d5"
+        ),
+        .binaryTarget(
+            name: "MTGSDKNewInterstitial",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.18.0/MTGSDKNewInterstitial.zip",
+            checksum: "f7e42b82dc8f82edf4864ed4172181b3fa8a6450a71cb86e79b1cd5c2e274778"
+        ),
+        .binaryTarget(
+            name: "MTGSDKReward",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.19.0/MTGSDKReward.zip",
+            checksum: "6267b5825f061bb9b1ea35a50426c8996dd9d6b712f53d15eca15b32f77744db"
+        ),
+        .binaryTarget(
+            name: "MTGSDKSplash",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.20.0/MTGSDKSplash.zip",
+            checksum: "2fdcdf88439800a70767875ccc787ebf04d90b2df0a8a55bad9709dc59149c3a"
+        ),
     ]
 )
