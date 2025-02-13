@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.2.0
+// v1.3.0
 let package = Package(
     name: "AdSDKs",
     platforms: [.iOS(.v12)],
@@ -56,6 +56,22 @@ let package = Package(
         .library(
             name: "MTGSDKSplash",
             targets: ["MTGSDKSplash"]
+        ),
+        .library(
+            name: "AppLovinSDK",
+            targets: ["AppLovinSDK"]
+        ),
+        .library(
+            name: "GoogleMobileAdsMediationAppLovin",
+            targets: ["GoogleMobileAdsMediationAppLovin"]
+        ),
+        .library(
+            name: "VungleAds",
+            targets: ["VungleAds"]
+        ),
+        .library(
+            name: "GoogleMobileAdsMediationVungle",
+            targets: ["GoogleMobileAdsMediationVungle"]
         ),
     ],
     dependencies: [],
@@ -119,6 +135,26 @@ let package = Package(
             name: "MTGSDKSplash",
             url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.20.0/MTGSDKSplash.zip",
             checksum: "2fdcdf88439800a70767875ccc787ebf04d90b2df0a8a55bad9709dc59149c3a"
+        ),
+        .binaryTarget(
+            name: "AppLovinSDK",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.22.0/AppLovinSDK.zip",
+            checksum: "e98c83a7fa0c998a8e3124ee26609141ba40f762c877ac3c85db7bccfbed7689"
+        ),
+        .binaryTarget(
+            name: "GoogleMobileAdsMediationAppLovin",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.23.0/GoogleMobileAdsMediationAppLovin.zip",
+            checksum: "fa927a130e7d4444f65de34af7fc6958846dd78c4feaacebce87cdc90b0ce70b"
+        ),
+        .binaryTarget(
+            name: "VungleAds",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.24.0/VungleAds.zip",
+            checksum: "9ad1b3b1538c9901dcd23811a7013e7946fb2ac8df69c37fb6dc7dcf2f52115c"
+        ),
+        .binaryTarget(
+            name: "GoogleMobileAdsMediationVungle",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.25.0/GoogleMobileAdsMediationVungle.zip",
+            checksum: "05c763a4041c1349ab607ac1ffb6f4761c73d9e597985f1c2f1ff050cc7a6b99"
         ),
     ]
 )
