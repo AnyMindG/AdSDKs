@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.3.0
+// v1.4.0
 let package = Package(
     name: "AdSDKs",
     platforms: [.iOS(.v12)],
@@ -73,9 +73,27 @@ let package = Package(
             name: "GoogleMobileAdsMediationVungle",
             targets: ["GoogleMobileAdsMediationVungle"]
         ),
+        .library(
+            name: "ChartboostSDK",
+            targets: ["ChartboostSDK"]
+        ),
+        .library(
+            name: "GoogleMobileAdsMediationChartboost",
+            targets: ["GoogleMobileAdsMediationChartboost"]
+        ),
     ],
     dependencies: [],
     targets: [
+        .target(
+            name: "AdSDKs",
+            path: "Sources",
+            exclude: ["Resources/Info.plist"],
+            resources:
+                [
+                    .process("Resources")
+                ],
+            publicHeadersPath: "include"
+            ),
         .binaryTarget(
             name: "OguryAds",
             url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.7.0/OguryAds.zip",
@@ -156,5 +174,16 @@ let package = Package(
             url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.25.0/GoogleMobileAdsMediationVungle.zip",
             checksum: "05c763a4041c1349ab607ac1ffb6f4761c73d9e597985f1c2f1ff050cc7a6b99"
         ),
+        .binaryTarget(
+            name: "ChartboostSDK",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.26.0/ChartboostSDK.zip",
+            checksum: "83917f92820ba56bb8dd3838d78b9b362a4ba5279992e615560ac07b240b84e7"
+        ),
+        .binaryTarget(
+            name: "GoogleMobileAdsMediationChartboost",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.27.0/GoogleMobileAdsMediationChartboost.zip",
+            checksum: "20a4aa8c32a28b35b06149461d8a14e4123d14b591fe6b3f10e358ffd71178dd"
+        ),
     ]
 )
+
