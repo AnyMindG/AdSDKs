@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.4.0
+// v1.5.0
 let package = Package(
     name: "AdSDKs",
     platforms: [.iOS(.v12)],
@@ -80,6 +80,14 @@ let package = Package(
         .library(
             name: "GoogleMobileAdsMediationChartboost",
             targets: ["GoogleMobileAdsMediationChartboost"]
+        ),
+        .library(
+            name: "UnityAds",
+            targets: ["UnityAds"]
+        ),
+        .library(
+            name: "GoogleMobileAdsMediationUnity",
+            targets: ["GoogleMobileAdsMediationUnity"]
         ),
     ],
     dependencies: [],
@@ -183,6 +191,16 @@ let package = Package(
             name: "GoogleMobileAdsMediationChartboost",
             url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.27.0/GoogleMobileAdsMediationChartboost.zip",
             checksum: "20a4aa8c32a28b35b06149461d8a14e4123d14b591fe6b3f10e358ffd71178dd"
+        ),
+        .binaryTarget(
+            name: "UnityAds",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.28.0/UnityAds.zip",
+            checksum: "58f67a3fb576a97275097129ba239bf578ecd1f0e8183828e26c34b987caaa03"
+        ),
+        .binaryTarget(
+            name: "GoogleMobileAdsMediationUnity",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.29.0/GoogleMobileAdsMediationUnity.zip",
+            checksum: "9403c5889d9ad1eca00af95a060a7e196359fe3a1807b7ed18f9f4bdf885f48e"
         ),
     ]
 )
