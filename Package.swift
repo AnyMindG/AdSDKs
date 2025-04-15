@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.5.0
+// v1.6.0
 let package = Package(
     name: "AdSDKs",
     platforms: [.iOS(.v12)],
@@ -199,7 +199,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "GoogleMobileAdsMediationUnity",
-            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.29.0/GoogleMobileAdsMediationUnity.zip",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.30.0/GoogleMobileAdsMediationUnity.zip",
             checksum: "9403c5889d9ad1eca00af95a060a7e196359fe3a1807b7ed18f9f4bdf885f48e"
         ),
     ]
