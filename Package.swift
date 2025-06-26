@@ -3,105 +3,69 @@
 
 import PackageDescription
 
-// v1.8.0
+// v1.9.0
 let package = Package(
     name: "AdSDKs",
+    defaultLocalization: "en",
     platforms: [.iOS(.v12)],
     products: [
-        // Another Ad SDK
-        .library(
-            name: "OguryAds",
-            targets: ["OguryAds"]
-        ),
-        .library(
-            name: "OMSDK_Ogury",
-            targets: ["OMSDK_Ogury"]
-        ),
-        .library(
-            name: "OguryCore",
-            targets: ["OguryCore"]
-        ),
-        .library(
-            name: "OgurySdk",
-            targets: ["OgurySdk"]
-        ),
-        .library(
-            name: "MTGSDK",
-            targets: ["MTGSDK"]
-        ),
-        .library(
-            name: "MTGSDKBanner",
-            targets: ["MTGSDKBanner"]
-        ),
-        .library(
-            name: "MTGSDKBidding",
-            targets: ["MTGSDKBidding"]
-        ),
-        .library(
-            name: "MTGSDKInterstitialVideo",
-            targets: ["MTGSDKInterstitialVideo"]
-        ),
-        .library(
-            name: "MTGSDKNativeAdvanced",
-            targets: ["MTGSDKNativeAdvanced"]
-        ),
-        .library(
-            name: "MTGSDKNewInterstitial",
-            targets: ["MTGSDKNewInterstitial"]
-        ),
-        .library(
-            name: "MTGSDKReward",
-            targets: ["MTGSDKReward"]
-        ),
-        .library(
-            name: "MTGSDKSplash",
-            targets: ["MTGSDKSplash"]
-        ),
-        .library(
-            name: "AppLovinSDK",
-            targets: ["AppLovinSDK"]
-        ),
-        .library(
-            name: "GoogleMobileAdsMediationAppLovin",
-            targets: ["GoogleMobileAdsMediationAppLovin"]
-        ),
-        .library(
-            name: "VungleAds",
-            targets: ["VungleAds"]
-        ),
-        .library(
-            name: "GoogleMobileAdsMediationVungle",
-            targets: ["GoogleMobileAdsMediationVungle"]
-        ),
-        .library(
-            name: "ChartboostSDK",
-            targets: ["ChartboostSDK"]
-        ),
-        .library(
-            name: "GoogleMobileAdsMediationChartboost",
-            targets: ["GoogleMobileAdsMediationChartboost"]
-        ),
-        .library(
-            name: "UnityAds",
-            targets: ["UnityAds"]
-        ),
-        .library(
-            name: "GoogleMobileAdsMediationUnity",
-            targets: ["GoogleMobileAdsMediationUnity"]
-        ),
+        // Binary SDK libraries
+        .library(name: "AdSDKs", targets: ["AdSDKs"]),
+        .library(name: "OguryAds", targets: ["OguryAds"]),
+        .library(name: "OMSDK_Ogury", targets: ["OMSDK_Ogury"]),
+        .library(name: "OguryCore", targets: ["OguryCore"]),
+        .library(name: "OgurySdk", targets: ["OgurySdk"]),
+        .library(name: "MTGSDK", targets: ["MTGSDK"]),
+        .library(name: "MTGSDKBanner", targets: ["MTGSDKBanner"]),
+        .library(name: "MTGSDKBidding", targets: ["MTGSDKBidding"]),
+        .library(name: "MTGSDKInterstitialVideo", targets: ["MTGSDKInterstitialVideo"]),
+        .library(name: "MTGSDKNativeAdvanced", targets: ["MTGSDKNativeAdvanced"]),
+        .library(name: "MTGSDKNewInterstitial", targets: ["MTGSDKNewInterstitial"]),
+        .library(name: "MTGSDKReward", targets: ["MTGSDKReward"]),
+        .library(name: "MTGSDKSplash", targets: ["MTGSDKSplash"]),
+        .library(name: "AppLovinSDK", targets: ["AppLovinSDK"]),
+        .library(name: "GoogleMobileAdsMediationAppLovin", targets: ["GoogleMobileAdsMediationAppLovin"]),
+        .library(name: "VungleAds", targets: ["VungleAds"]),
+        .library(name: "GoogleMobileAdsMediationVungle", targets: ["GoogleMobileAdsMediationVungle"]),
+        
+        .library(name: "ChartboostSDKResources", targets: ["ChartboostSDKResources"]),
+        .library(name: "ChartboostSDK", targets: ["ChartboostSDK"]),
+        .library(name: "GoogleMobileAdsMediationChartboost", targets: ["GoogleMobileAdsMediationChartboost"]),
+        .library(name: "UnityAds", targets: ["UnityAds"]),
+        .library(name: "GoogleMobileAdsMediationUnity", targets: ["GoogleMobileAdsMediationUnity"]),
+        
+        .library(name: "PAGAdSDKResources", targets: ["PAGAdSDKResources"]),
+        .library(name: "PAGAdSDK", targets: ["PAGAdSDK"]),
+        .library(name: "GoogleMobileAdsMediationPangle", targets: ["GoogleMobileAdsMediationPangle"])
     ],
     dependencies: [],
     targets: [
         .target(
             name: "AdSDKs",
-            path: "Sources",
+            dependencies: [
+                "ChartboostSDKResources",
+                "PAGAdSDKResources"
+            ],
+            path: "Sources/AdSDKs"
+        ),
+
+        // Swift resource targets
+        .target(
+            name: "ChartboostSDKResources",
+            path: "Sources/ChartboostSDKResources",
             exclude: ["Resources/Info.plist"],
-            resources:
-                [
-                    .process("Resources")
-                ],
+            resources: [.process("Resources")],
             publicHeadersPath: "include"
-            ),
+        ),
+        .target(
+            name: "PAGAdSDKResources",
+            path: "Sources/PAGAdSDKResources",
+            exclude: ["Resources/Info.plist"],
+            resources: [.process("Resources")],
+            publicHeadersPath: ""
+        ),
+
+        // Binary Targets
         .binaryTarget(
             name: "OguryAds",
             url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.7.0/OguryAds.zip",
@@ -201,6 +165,17 @@ let package = Package(
             name: "GoogleMobileAdsMediationUnity",
             url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.32.0/GoogleMobileAdsMediationUnity.zip",
             checksum: "c487e04848bc6468f1509d30703c594d9046209566598c82b6f465dbda1884e3"
+        ),
+        
+        .binaryTarget(
+                name: "PAGAdSDK",
+                url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.34.0/PAGAdSDK.zip",
+                checksum: "1a3b1400cc93fdf27c1e0189231e2a321788537e416d450b04d91ede6871260f"
+            ),
+        .binaryTarget(
+            name: "GoogleMobileAdsMediationPangle",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.33.0/PangleAdapter.zip",
+            checksum: "09dcb215bd5bb64cff90d226c6a4467a56ac7101e6dc860996aba01f38c95a41"
         ),
     ]
 )
