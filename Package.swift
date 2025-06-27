@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.10.0
+// v1.11.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
@@ -49,7 +49,7 @@ let package = Package(
             path: "Sources/AdSDKs"
         ),
 
-        // Swift resource targets
+        // Swift resource targets for Chartboost
         .target(
             name: "ChartboostSDKResources",
             path: "Sources/ChartboostSDKResources",
@@ -57,6 +57,7 @@ let package = Package(
             resources: [.process("Resources")],
             publicHeadersPath: "include"
         ),
+        // Swift resource targets for Pangle
         .target(
             name: "PAGAdSDKResources",
             path: "Sources/PAGAdSDKResources",
