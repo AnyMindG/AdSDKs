@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.12.0
+// v1.13.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
@@ -15,6 +15,8 @@ let package = Package(
         .library(name: "GoogleMobileAdsMediationAppLovin", targets: ["GoogleMobileAdsMediationAppLovin"]),
         .library(name: "UnityAds", targets: ["UnityAds"]),
         .library(name: "GoogleMobileAdsMediationUnity", targets: ["GoogleMobileAdsMediationUnity"]),
+        .library(name: "IASDKCore", targets: ["IASDKCore"]),
+        .library(name: "GoogleMobileAdsMediationFyber", targets: ["GoogleMobileAdsMediationFyber"]),
         .library(name: "AnyManagerMediation", targets: ["AnyManagerMediation"]),
     ],
     dependencies: [],
@@ -51,7 +53,18 @@ let package = Package(
             name: "AnyManagerMediation",
             url: "https://github.com/AnyMindG/AnyManagerMediation/releases/download/10000.5.0/AnyManagerMediation.zip",
             checksum: "3881725bedb103e02e6a93c2d61117e53c427eb2373e9f7f084e87a1d31026b2"
-        )
+        ),
+        .binaryTarget(
+            name: "IASDKCore",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.5.0/IASDKCore.zip",
+            checksum: "f295c2d7911c2206a89e43ef171926c74cb6ace1cf0bf1a8a6a12f1171dd03c6"
+        ),
+        
+        .binaryTarget(
+            name: "GoogleMobileAdsMediationFyber",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.6.0/GoogleMobileAdsMediationFyber.zip",
+            checksum: "c1582495b37211471d9f7f5142d07d6a732eab7be61e826c39c532fd4b13ff1a"
+        ),
         
     ]
 )
