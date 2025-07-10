@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.15.0
+// v1.16.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
@@ -40,6 +40,7 @@ let package = Package(
         .library(name: "SmaatoSDKRewardedAds", targets: ["SmaatoSDKRewardedAds"]),
         .library(name: "SmaatoSDKRichMedia", targets: ["SmaatoSDKRichMedia"]),
         .library(name: "SmaatoSDKVideo", targets: ["SmaatoSDKVideo"]),
+        .library(name: "SASDisplayKit", targets: ["SASDisplayKit"]),
     ],
     dependencies: [],
     targets: [
@@ -193,6 +194,11 @@ let package = Package(
             name: "SmaatoSDKVideo",
             url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.46.0/SmaatoSDKVideo.zip",
             checksum: "365c11d85799847e762e469d21c254bbe5081c7c07fc5d79c5aa8c2ade61aed4"
+        ),
+        .binaryTarget(
+            name: "SASDisplayKit",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.48.0/SASDisplayKit.zip",
+            checksum: "b8745df46b9db9f58da86d004055d9b8ea1b0381f7102129b1cbd35941193397"
         ),
     ]
 )
