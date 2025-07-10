@@ -3,11 +3,11 @@
 
 import PackageDescription
 
-// v1.14.0
+// v1.15.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
-    platforms: [.iOS(.v12)],
+    platforms: [.iOS(.v13)],
     products: [
         // Binary SDK libraries
         .library(name: "AdSDKs", targets: ["AdSDKs"]),
