@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.16.0
+// v1.17.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
@@ -41,6 +41,8 @@ let package = Package(
         .library(name: "SmaatoSDKRichMedia", targets: ["SmaatoSDKRichMedia"]),
         .library(name: "SmaatoSDKVideo", targets: ["SmaatoSDKVideo"]),
         .library(name: "SASDisplayKit", targets: ["SASDisplayKit"]),
+        .library(name: "PAGAdSDK", targets: ["PAGAdSDK"]),
+        .library(name: "GoogleMobileAdsMediationPangle", targets: ["GoogleMobileAdsMediationPangle"])
     ],
     dependencies: [],
     targets: [
@@ -199,6 +201,16 @@ let package = Package(
             name: "SASDisplayKit",
             url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.48.0/SASDisplayKit.zip",
             checksum: "b8745df46b9db9f58da86d004055d9b8ea1b0381f7102129b1cbd35941193397"
+        ),
+        .binaryTarget(
+                name: "PAGAdSDK",
+                url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.34.0/PAGAdSDK.zip",
+                checksum: "1a3b1400cc93fdf27c1e0189231e2a321788537e416d450b04d91ede6871260f"
+        ),
+        .binaryTarget(
+              name: "GoogleMobileAdsMediationPangle",
+              url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.33.0/PangleAdapter.zip",
+              checksum: "09dcb215bd5bb64cff90d226c6a4467a56ac7101e6dc860996aba01f38c95a41"
         ),
     ]
 )
