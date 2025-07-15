@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.19.0
+// v1.20.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
@@ -45,8 +45,8 @@ let package = Package(
         .library(name: "GoogleMobileAdsMediationFacebook", targets: ["GoogleMobileAdsMediationFacebook"]),
         .library(name: "AmazonPublisherServicesSDK", targets: ["AmazonPublisherServicesSDK"]),
         .library(name: "AmazonPublisherServicesAdMobAdapter", targets: ["AmazonPublisherServicesAdMobAdapter"]),
-        .library(name: "FiveAd", targets: ["FiveAd"]),
-        .library(name: "GoogleMobileAdsMediationLine", targets: ["GoogleMobileAdsMediationLine"]),
+//        .library(name: "FiveAd", targets: ["FiveAd"]),
+//        .library(name: "GoogleMobileAdsMediationLine", targets: ["GoogleMobileAdsMediationLine"]),
     ],
     dependencies: [],
     targets: [
@@ -226,15 +226,15 @@ let package = Package(
             url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.52.0/AmazonPublisherServicesAdMobAdapter.zip",
             checksum: "5c2be15937c648005c22b566ea903dca6eb85acf86cfb76a0793d8a5429efd01"
         ),
-        .binaryTarget(
-            name: "FiveAd",
-            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.55.0/FiveAd.zip",
-            checksum: "d349d4b7f66f0f1064bb2d8e58f941d0c68726f9fccead427eeaa269a42b930e"
-        ),
-        .binaryTarget(
-            name: "GoogleMobileAdsMediationLine",
-            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.54.0/GoogleMobileAdsMediationLine.zip",
-            checksum: "3f2c3eecb316d341f2d501c7e940c4ef1194d1887ac4f356d6bac0c88fe97815"
-        ),
+//        .binaryTarget(
+//            name: "FiveAd",
+//            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.55.0/FiveAd.zip",
+//            checksum: "d349d4b7f66f0f1064bb2d8e58f941d0c68726f9fccead427eeaa269a42b930e"
+//        ),
+//        .binaryTarget(
+//            name: "GoogleMobileAdsMediationLine",
+//            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.54.0/GoogleMobileAdsMediationLine.zip",
+//            checksum: "3f2c3eecb316d341f2d501c7e940c4ef1194d1887ac4f356d6bac0c88fe97815"
+//        ),
     ]
 )
