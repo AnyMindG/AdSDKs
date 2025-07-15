@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.18.0
+// v1.19.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
@@ -228,8 +228,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "FiveAd",
-            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.53.0/FiveAd.zip",
-            checksum: "6eb71b8d1e0a90bfbf5c8a6cb1c0d0288afc6bab4a9404f2cf3df67cbd9ab490"
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.55.0/FiveAd.zip",
+            checksum: "d349d4b7f66f0f1064bb2d8e58f941d0c68726f9fccead427eeaa269a42b930e"
         ),
         .binaryTarget(
             name: "GoogleMobileAdsMediationLine",
