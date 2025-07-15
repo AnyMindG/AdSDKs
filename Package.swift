@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.17.0
+// v1.18.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
@@ -41,8 +41,12 @@ let package = Package(
         .library(name: "SmaatoSDKRichMedia", targets: ["SmaatoSDKRichMedia"]),
         .library(name: "SmaatoSDKVideo", targets: ["SmaatoSDKVideo"]),
         .library(name: "SASDisplayKit", targets: ["SASDisplayKit"]),
-        .library(name: "PAGAdSDK", targets: ["PAGAdSDK"]),
-        .library(name: "GoogleMobileAdsMediationPangle", targets: ["GoogleMobileAdsMediationPangle"])
+        .library(name: "FBAudienceNetwork", targets: ["FBAudienceNetwork"]),
+        .library(name: "GoogleMobileAdsMediationFacebook", targets: ["GoogleMobileAdsMediationFacebook"]),
+        .library(name: "AmazonPublisherServicesSDK", targets: ["AmazonPublisherServicesSDK"]),
+        .library(name: "AmazonPublisherServicesAdMobAdapter", targets: ["AmazonPublisherServicesAdMobAdapter"]),
+        .library(name: "FiveAd", targets: ["FiveAd"]),
+        .library(name: "GoogleMobileAdsMediationLine", targets: ["GoogleMobileAdsMediationLine"]),
     ],
     dependencies: [],
     targets: [
@@ -203,14 +207,34 @@ let package = Package(
             checksum: "b8745df46b9db9f58da86d004055d9b8ea1b0381f7102129b1cbd35941193397"
         ),
         .binaryTarget(
-                name: "PAGAdSDK",
-                url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.34.0/PAGAdSDK.zip",
-                checksum: "1a3b1400cc93fdf27c1e0189231e2a321788537e416d450b04d91ede6871260f"
+            name: "FBAudienceNetwork",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.49.0/FBAudienceNetwork.zip",
+            checksum: "5a94da1552d4aebae4c20526fa1aa3878c6d3bcf8bd56b2f9331dc9d04e61145"
         ),
         .binaryTarget(
-              name: "GoogleMobileAdsMediationPangle",
-              url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.33.0/PangleAdapter.zip",
-              checksum: "09dcb215bd5bb64cff90d226c6a4467a56ac7101e6dc860996aba01f38c95a41"
+            name: "GoogleMobileAdsMediationFacebook",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.50.0/GoogleMobileAdsMediationFacebook.zip",
+            checksum: "969d1b8c41cddabd61f7b132c232a9ec7fffc90de585484dcd9c906938767f22"
+        ),
+        .binaryTarget(
+            name: "AmazonPublisherServicesSDK",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.51.0/AmazonPublisherServicesSDK.zip",
+            checksum: "41f008cd0fabc76cd033cb7d818734182b9ecd0dda75b1657e12ae87d274e19f"
+        ),
+        .binaryTarget(
+            name: "AmazonPublisherServicesAdMobAdapter",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.52.0/AmazonPublisherServicesAdMobAdapter.zip",
+            checksum: "5c2be15937c648005c22b566ea903dca6eb85acf86cfb76a0793d8a5429efd01"
+        ),
+        .binaryTarget(
+            name: "FiveAd",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.53.0/FiveAd.zip",
+            checksum: "6eb71b8d1e0a90bfbf5c8a6cb1c0d0288afc6bab4a9404f2cf3df67cbd9ab490"
+        ),
+        .binaryTarget(
+            name: "GoogleMobileAdsMediationLine",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.54.0/GoogleMobileAdsMediationLine.zip",
+            checksum: "3f2c3eecb316d341f2d501c7e940c4ef1194d1887ac4f356d6bac0c88fe97815"
         ),
     ]
 )
