@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.20.0
+// v1.21.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
@@ -45,6 +45,8 @@ let package = Package(
         .library(name: "GoogleMobileAdsMediationFacebook", targets: ["GoogleMobileAdsMediationFacebook"]),
         .library(name: "AmazonPublisherServicesSDK", targets: ["AmazonPublisherServicesSDK"]),
         .library(name: "AmazonPublisherServicesAdMobAdapter", targets: ["AmazonPublisherServicesAdMobAdapter"]),
+        .library(name: "BigoADS", targets: ["BigoADS"]),
+        .library(name: "bigo-ads-admob-adapter", targets: ["bigo-ads-admob-adapter"]),
 //        .library(name: "FiveAd", targets: ["FiveAd"]),
 //        .library(name: "GoogleMobileAdsMediationLine", targets: ["GoogleMobileAdsMediationLine"]),
     ],
@@ -53,7 +55,11 @@ let package = Package(
         .target(
             name: "AdSDKs",
             dependencies: [],
-            path: "Sources/AdSDKs"
+            path: "Sources/AdSDKs",
+            exclude: ["Resources/Info.plist"],
+            resources: [
+                    .process("Resources")
+            ]
         ),
         // Binary Targets
         .binaryTarget(
@@ -225,6 +231,16 @@ let package = Package(
             name: "AmazonPublisherServicesAdMobAdapter",
             url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.52.0/AmazonPublisherServicesAdMobAdapter.zip",
             checksum: "5c2be15937c648005c22b566ea903dca6eb85acf86cfb76a0793d8a5429efd01"
+        ),
+        .binaryTarget(
+            name: "BigoADS",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.56.0/BigoADS.zip",
+            checksum: "2f144c5aa011ef13d76111d194d4384d08117aa0061c8c00ada65fbfe1a3bfaf"
+        ),
+        .binaryTarget(
+            name: "bigo-ads-admob-adapter",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.57.0/bigo_ads_admob_adapter.zip",
+            checksum: "17ad6b146aacc26d60a2dbea5979309b7410163c45128aa1da99db6b8935996a"
         ),
 //        .binaryTarget(
 //            name: "FiveAd",
