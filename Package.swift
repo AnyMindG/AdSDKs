@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.21.0
+// v1.22.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
@@ -56,9 +56,9 @@ let package = Package(
             name: "AdSDKs",
             dependencies: [],
             path: "Sources/AdSDKs",
-            exclude: ["Resources/Info.plist"],
+            exclude: [],
             resources: [
-                    .process("Resources")
+                    .copy("Bundles/BigoADSRes.bundle")
             ]
         ),
         // Binary Targets
