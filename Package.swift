@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.22.0
+// v1.23.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
@@ -55,11 +55,7 @@ let package = Package(
         .target(
             name: "AdSDKs",
             dependencies: [],
-            path: "Sources/AdSDKs",
-            exclude: [],
-            resources: [
-                    .copy("Bundles/BigoADSRes.bundle")
-            ]
+            path: "Sources/AdSDKs"
         ),
         // Binary Targets
         .binaryTarget(
@@ -234,8 +230,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "BigoADS",
-            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.56.0/BigoADS.zip",
-            checksum: "2f144c5aa011ef13d76111d194d4384d08117aa0061c8c00ada65fbfe1a3bfaf"
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.58.0/BigoADS.zip",
+            checksum: "f376b60bcd58cf9f5b2068334a498484e0948cb72fd14e626531c77ed76906c6"
         ),
         .binaryTarget(
             name: "bigo-ads-admob-adapter",
