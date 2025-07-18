@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-// v1.25.0
+// v1.26.0
 let package = Package(
     name: "AdSDKs",
     defaultLocalization: "en",
@@ -45,8 +45,10 @@ let package = Package(
         .library(name: "GoogleMobileAdsMediationFacebook", targets: ["GoogleMobileAdsMediationFacebook"]),
         .library(name: "AmazonPublisherServicesSDK", targets: ["AmazonPublisherServicesSDK"]),
         .library(name: "AmazonPublisherServicesAdMobAdapter", targets: ["AmazonPublisherServicesAdMobAdapter"]),
-        .library(name: "BigoADS", targets: ["BigoADS"]),
-        .library(name: "bigo-ads-admob-adapter", targets: ["bigo-ads-admob-adapter"]),
+        .library(name: "IronSource", targets: ["IronSource"]),
+        .library(name: "GoogleMobileAdsMediationIronSource", targets: ["GoogleMobileAdsMediationIronSource"]),
+//        .library(name: "BigoADS", targets: ["BigoADS"]),
+//        .library(name: "bigo-ads-admob-adapter", targets: ["bigo-ads-admob-adapter"]),
 //        .library(name: "FiveAd", targets: ["FiveAd"]),
 //        .library(name: "GoogleMobileAdsMediationLine", targets: ["GoogleMobileAdsMediationLine"]),
     ],
@@ -55,11 +57,11 @@ let package = Package(
         .target(
             name: "AdSDKs",
             dependencies: [],
-            path: "Sources/AdSDKs",
-            exclude: ["Bundles/BigoADSRes.bundle/Info.plist"],
-            resources: [
-                .process("Bundles/BigoADSRes.bundle")  // or .copy
-              ]
+            path: "Sources/AdSDKs"
+//            exclude: ["Bundles/BigoADSRes.bundle/Info.plist"],
+//            resources: [
+//                .process("Bundles/BigoADSRes.bundle")  // or .copy
+//              ]
         ),
         // Binary Targets
         .binaryTarget(
@@ -233,15 +235,25 @@ let package = Package(
             checksum: "5c2be15937c648005c22b566ea903dca6eb85acf86cfb76a0793d8a5429efd01"
         ),
         .binaryTarget(
-            name: "BigoADS",
-            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.59.0/BigoADS.zip",
-            checksum: "4bf7bddb6bfea03c4d56863303187d1ce86c5924d44dc732d3dfb2fb702c5760"
+            name: "IronSource",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.60.0/IronSource.zip",
+            checksum: "1a4b99ff0cec575c6a714e77f1ecc3ba0f552f2587a68615303d3a72978ac95e"
         ),
         .binaryTarget(
-            name: "bigo-ads-admob-adapter",
-            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.57.0/bigo_ads_admob_adapter.zip",
-            checksum: "17ad6b146aacc26d60a2dbea5979309b7410163c45128aa1da99db6b8935996a"
+            name: "GoogleMobileAdsMediationIronSource",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.61.0/GoogleMobileAdsMediationIronSource.zip",
+            checksum: "bf4a1363b36bb7c180f4f6dc0abb8416d0cda09788cfa4d226a15cdb83acec75"
         ),
+//        .binaryTarget(
+//            name: "BigoADS",
+//            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.59.0/BigoADS.zip",
+//            checksum: "4bf7bddb6bfea03c4d56863303187d1ce86c5924d44dc732d3dfb2fb702c5760"
+//        ),
+//        .binaryTarget(
+//            name: "bigo-ads-admob-adapter",
+//            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.57.0/bigo_ads_admob_adapter.zip",
+//            checksum: "17ad6b146aacc26d60a2dbea5979309b7410163c45128aa1da99db6b8935996a"
+//        ),
 //        .binaryTarget(
 //            name: "FiveAd",
 //            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.55.0/FiveAd.zip",
